@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Guess the Number</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 40px; background: #f9f9f9; color: #333; }
+    h1 { text-align: center; }
+    .game-btn { /* same style as game */ background:#28a745; color:white; padding:10px 20px; border:1px solid #ccc; border-radius:5px; cursor:pointer; transition:.3s; position:relative; z-index:1; overflow:hidden;}
+    .game-btn:hover { background:#e53935; color:#fff; transform:scale(1.07) rotate(-2deg); box-shadow:0 0 20px 4px #ff1744,0 2px 8px rgba(0,0,0,0.15);}
+    .game-btn::after {content:"";position:absolute;left:50%;top:50%;width:0;height:0;background:rgba(255,23,68,0.15);border-radius:100%;transform:translate(-50%,-50%);transition:.4s;z-index:-1;}
+    .game-btn:hover::after {width:250%;height:400%;}
+  </style>
+</head>
+<body>
+  <h1>About the Game</h1>
+  <p><strong>Guess the Number</strong> is a fun and simple number guessing game. The rules are easy:</p>
+  <ul>
+    <li>You start at Level 1 with 5 attempts.</li>
+    <li>Try to guess the hidden number between 1 and 100.</li>
+    <li>If you guess correctly, you level up!</li>
+    <li>If you fail, the game resets to Level 1.</li>
+  </ul>
+  <p>All progress is saved while your browser tab is open, but resets when you close it.</p>
+  <div style="text-align:center; margin-top:40px;">
+    <a href="index.html"><button class="game-btn">← Back to Game</button></a>
+  </div>
+</body>
+</html>
